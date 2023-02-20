@@ -49,8 +49,15 @@ body {
 /*  */
 
 /* Location, temperature group */
+#group-weather-condition {
+  display: flex;
+}
 #weather-condition {
   font-size: 1.75rem;
+}
+#icon-weather-condition {
+  height: 75px;
+  width: 75px;
 }
 #group-info > * {
   display: block;
@@ -59,13 +66,16 @@ body {
   font-size: 2.75rem;
   font-weight: 600;
 }
+#group-temperature {
+  display: flex;
+  justify-content: center;
+}
 #temperature-info {
   text-align: center;
-  font-size: 10rem;
+  font-size: 8rem;
 }
 #temperature-symbol {
-  position: absolute;
-  margin: 25px 0 0 260px;
+  margin-top: 20px;
   font-size: 2.5rem;
 }
 #temperature-info,

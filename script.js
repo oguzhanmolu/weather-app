@@ -5,6 +5,9 @@ const buttonSearch = document.querySelector('.icon-search');
 const weatherCondition = document.getElementById('weather-condition');
 const locationInfo = document.getElementById('location-info');
 const temperatureInfo = document.getElementById('temperature-info');
+const groupWeatherCondition = document.getElementById(
+  'group-weather-condition'
+);
 const iconWeatherCondition = document.getElementById('icon-weather-condition');
 
 // Get weather data from API,
@@ -16,21 +19,43 @@ async function getWeatherData(location) {
       { mode: 'cors' }
     );
     const weatherData = await response.json();
-    processWeatherData(weatherData);
+    displayWeatherData(processWeatherData(weatherData));
   } catch {
     alert('City not found');
   }
 }
 
-// Process the data
-function processWeatherData(data) {
-  console.log(data);
+// Process the data, create a new object with the input data(city name)
+function processWeatherData(object) {
+  const weatherObject = {
+    condition: object.current.condition.text,
+    conditionSrc: object.current.condition.icon,
+    cityName: object.location.name,
+    countryName: object.location.country,
+    temperature: object.current.temp_c,
+  };
+  return weatherObject;
 }
 
-// Display the data
-function displayWeatherData() {}
+// Display the data in text content
+function displayWeatherData(object) {
+  iconWeatherCondition.src = object.conditionSrc;
+  weatherCondition.textContent = object.condition;
+  locationInfo.textContent = `${object.cityName}, ${object.countryName}`;
+  temperatureInfo.textContent = object.temperature;
+  groupWeatherCondition.style.display = 'flex';
+  groupWeatherCondition.style.alignItems = 'center';
+  inputSearch.textContent = '';
+}
 
-// Search bar events
-buttonSearch.addEventListener('click', () => {
+// Searchbar event listener
+buttonSearch.addEventListener('click', (e) => {
+  e.preventDefault();
   getWeatherData(inputSearch.value);
 });
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Enter') getWeatherData(inputSearch.value);
+});
+
+// Placeholder display for start
+getWeatherData('Istanbul');
