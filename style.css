@@ -7,20 +7,40 @@
   color: white;
   border-style: none;
 }
+
 body {
   background-image: url(background.jpg);
   background-repeat: no-repeat;
 }
+
 #main-container {
   display: flex;
   justify-content: center;
   margin-top: 50px;
+  gap: 100px;
 }
-#search-bar {
+
+/* Search bar */
+#group-search {
+  display: flex;
+  align-items: center;
+}
+#input-search {
   height: 50px;
   width: 250px;
-  background-color: rgba(255, 255, 255, 0.4);
-  border-radius: 5px;
+  background-color: transparent;
   font-size: 1.75rem;
   text-align: center;
+  border-bottom: 2px solid white;
 }
+#input-search::placeholder {
+  opacity: 1;
+}
+.fa-solid {
+  font-size: 1.75rem;
+  cursor: pointer;
+}
+.fa-solid:hover {
+  transform: scale(1.25);
+}
+/*  */
