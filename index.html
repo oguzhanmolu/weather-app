@@ -16,8 +16,19 @@
     <div id="main-container">
       <!-- Search bar -->
       <div id="group-search">
-        <input type="text" id="input-search" placeholder="City Name" />
+        <input max="50" type="text" id="input-search" placeholder="City Name" />
         <i class="fa-solid fa-magnifying-glass icon-search"></i>
+      </div>
+
+      <!-- Location Info -->
+      <div id="group-info">
+        <span id="weather-condition"
+          ><img id="icon-weather-condition" src="" alt="weather icon" />
+          Cloudy</span
+        >
+        <span id="location-info">CITY, COUNTRY</span>
+        <span id="temperature-symbol">°C</span>
+        <span id="temperature-info">30 </span>
       </div>
     </div>
   </body>

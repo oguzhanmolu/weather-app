@@ -1,6 +1,10 @@
 'strict mode';
 const inputSearch = document.getElementById('input-search');
 const buttonSearch = document.querySelector('.icon-search');
+const weatherCondition = document.getElementById('weather-condition');
+const locationInfo = document.getElementById('location-info');
+const temperatureInfo = document.getElementById('temperature-info');
+const iconWeatherCondition = document.getElementById('icon-weather-condition');
 
 // Get weather data from API
 async function getWeatherData(location) {
@@ -15,7 +19,7 @@ async function getWeatherData(location) {
   }
 }
 
-getWeatherData('istanbul');
+getWeatherData('Auckland');
 
 // Event listeners for search bar
 buttonSearch.addEventListener('click', () => {
