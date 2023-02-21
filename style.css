@@ -66,6 +66,10 @@ body {
   font-size: 2.75rem;
   font-weight: 600;
 }
+#date-info {
+  font-size: 1.5rem;
+}
+
 #group-temperature {
   display: flex;
   justify-content: center;
@@ -82,4 +86,10 @@ body {
 #temperature-symbol {
   font-family: 'Nunito', sans-serif;
   font-weight: bold;
+}
+#other-infos > * {
+  display: block;
+  margin-top: 10px;
+  text-align: center;
+  font-size: 1.6rem;
 }
