@@ -44,6 +44,7 @@ body {
 .fa-solid,
 #icon-weather-condition {
   font-size: 1.75rem;
+  cursor: pointer;
 }
 
 .fa-solid:hover {
