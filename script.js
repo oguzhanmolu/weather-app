@@ -23,6 +23,7 @@ async function handleWeatherData(location) {
   }
 
   const data = processWeatherData(await response.json());
+  console.log(data);
   return displayWeatherData(data);
 }
 

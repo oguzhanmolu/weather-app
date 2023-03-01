@@ -59,8 +59,7 @@ body {
 #group-info > *,
 #other-infos > * {
   display: block;
-  font-size: 1.5rem;
-  margin-top: 5px;
+  font-size: 1.75rem;
   text-align: center;
 }
 
@@ -70,8 +69,7 @@ body {
 
 #group-temperature,
 #group-weather-condition {
-  display: flex;
-  justify-content: center;
+  display: block;
 }
 #group-weather-condition {
   align-items: center;
@@ -80,6 +78,7 @@ body {
   font-size: 8rem;
 }
 #temperature-symbol {
+  position: fixed;
   margin-top: 20px;
-  font-size: 2.5rem;
+  font-size: 3rem;
 }
