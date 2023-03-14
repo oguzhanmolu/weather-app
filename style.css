@@ -67,11 +67,12 @@ body {
   font-size: 3rem;
 }
 
-#group-temperature,
-#group-weather-condition {
+#group-temperature {
   display: block;
 }
 #group-weather-condition {
+  display: flex;
+  justify-content: center;
   align-items: center;
 }
 #temperature-info {
